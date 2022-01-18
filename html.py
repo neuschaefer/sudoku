@@ -15,8 +15,8 @@ print("""
 <body>
 <style>
     body { margin-top: 5em; }
-    table { border-collapse: collapse; font-family: sans-serif; margin: auto; }
-    colgroup, tbody { border: solid medium; }
+    table { border-collapse: collapse; font-family: sans-serif; margin: auto; font-size: 200%%; }
+    colgroup, tbody { border: solid; }
     td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
 </style>
 <table>
