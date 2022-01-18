@@ -35,7 +35,7 @@ for y in DIG:
             l += str(pat.v[x,y])
     print(l)
 print("""
-    </table>
-    </body>
-    </html>
+</table>
+</body>
+</html>
 """)
