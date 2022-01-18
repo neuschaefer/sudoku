@@ -3,3 +3,8 @@
 `sudoku.py` contains a few classes to deal with Sudoku problems.
 
 The other `.py` files are examples of how to use `sudoku.py`.
+
+
+## Example
+
+![Example puzzle](./Sudoku.svg)
