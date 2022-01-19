@@ -92,6 +92,15 @@ class Pattern:
     def __eq__(self, other):
         return all([self.v[x,y] == other.v[x,y] for x,y in all_idx()])
 
+    def diff(self, other):
+        p1 = Pattern()
+        p2 = Pattern()
+        for x,y in all_idx():
+            if self.v[x,y] != other.v[x,y]:
+                p1.set(x,y, self.v[x,y])
+                p2.set(x,y, other.v[x,y])
+        return p1, p2
+
 class Solution(Pattern):
     def from_model(model, sudoku):
         sol = Solution()
@@ -101,15 +110,6 @@ class Solution(Pattern):
 
     def __str__(self):
         return self.str_pretty()
-
-    def diff(self, other):
-        p1 = Pattern()
-        p2 = Pattern()
-        for x,y in all_idx():
-            if self.v[x,y] != other.v[x,y]:
-                p1.set(x,y, self.v[x,y])
-                p2.set(x,y, other.v[x,y])
-        return p1, p2
 
 class Sudoku:
     def __init__(self, name='s'):
