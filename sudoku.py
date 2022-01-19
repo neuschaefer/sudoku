@@ -70,6 +70,9 @@ class Pattern:
     def __str__(self):
         return self.str_raw()
 
+    def show(self):
+        print(self)
+
     def str_pretty(self):
         LINE = ".-------.-------.-------."
         ll = []
@@ -86,8 +89,12 @@ class Pattern:
         ll.append(LINE)
         return '\n'.join(ll)
 
-    def show(self):
-        print(self)
+    def str_secuso(self):
+        digits = ''
+        for x,y in all_idx():
+            v = self.v[x,y]
+            digits += str(v) if v else '0'
+        return 'https://sudoku.secuso.org/' + digits
 
     def __eq__(self, other):
         return all([self.v[x,y] == other.v[x,y] for x,y in all_idx()])

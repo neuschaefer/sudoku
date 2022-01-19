@@ -21,6 +21,7 @@ pat = Pattern("""
   . 6 8  . . .  7 3 .
   """)
 s.set_pattern(pat)
+print(pat.str_secuso())
 if s.unique():
     print('Puzzle is unique')
 else:

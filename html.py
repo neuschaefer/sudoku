@@ -18,13 +18,14 @@ print("""
     table { border-collapse: collapse; font-family: sans-serif; margin: auto; font-size: 200%%; }
     colgroup, tbody { border: solid medium; }
     td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+    a { text-decoration: none; color: inherit; }
 </style>
 <table>
-    <caption>Sudoku (%s)</caption>
+    <caption>Sudoku (<a href="%s">%s</a>)</caption>
     <colgroup><col><col><col>
     <colgroup><col><col><col>
     <colgroup><col><col><col>
-""" % datetime.date.today().strftime('%F'))
+""" % (pat.str_secuso(), datetime.date.today().strftime('%F')))
 for y in DIG:
     if y in [1,4,7]:
         print('    <tbody>')
